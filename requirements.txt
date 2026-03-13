@@ -1,0 +1,7 @@
+Flask
+Flask-Bcrypt
+PyJWT
+mysql-connector-python
+PyMySQL
+cryptography
+gunicorn

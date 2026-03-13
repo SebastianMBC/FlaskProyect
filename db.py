@@ -5,6 +5,6 @@ def get_connection():
         host="localhost",       # O la IP de tu servidor
         user="root",            # Tu usuario de MySQL (suele ser root en local)
         password="",            # Tu contraseña (vacía si usas XAMPP por defecto)
-        database="flask_db" # El nombre de la base de datos que creaste
+        database="sebastianmateo_616" # El nombre de la base de datos que creaste
     )
     return conexion
