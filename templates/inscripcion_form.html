@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Inscribir Alumno{% endblock %}
+
+{% block content %}
+<div class="col-md-6">
+
+    <h3>Inscribir Alumno en Curso</h3>
+
+    <form method="POST" class="card p-3 shadow-sm">
+
+        <!-- SELECT ALUMNOS -->
+        <div class="mb-3">
+            <label class="form-label">Alumno</label>
+            <select name="alumno_id" class="form-select" required>
+                <option value="">Seleccione un alumno</option>
+                {% for a in alumnos %}
+                    <option value="{{ a.id }}">
+                        {{ a.nombre }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- SELECT CURSOS -->
+        <div class="mb-3">
+            <label class="form-label">Curso</label>
+            <select name="curso_id" class="form-select" required>
+                <option value="">Seleccione un curso</option>
+                {% for c in cursos %}
+                    <option value="{{ c.id }}">
+                        {{ c.nombre }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <button class="btn btn-primary">
+            Inscribir
+        </button>
+
+        <a href="/inscripciones" class="btn btn-secondary">
+            Cancelar
+        </a>
+    </form>
+
+</div>
+{% endblock %}

@@ -1,0 +1,8 @@
+#reinstalar venv
+python -m venv venv
+
+#activar venv
+venv\Scripts\activate
+
+#instalar dependencias
+pip install flask flask-mysqldb bcrypt

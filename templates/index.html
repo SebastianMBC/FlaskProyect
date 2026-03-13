@@ -1,0 +1,18 @@
+<!-- Indicamos que esta página hereda de base.html -->
+{% extends 'base.html' %}
+<!-- Definimos el título -->
+{% block title %}FLASK TITULO PAGINA{% endblock %}
+<!-- Definimos el contenido -->
+{% block content %}
+<div class="mt-4">
+    <form method="POST">
+        <!-- name es la clave usada por Flask -->
+        <input type="text" name="nombre" class="form-control" placeholder="Ingrese su nombre">
+        <button class="btn btn-primary mt-2">Enviar</button>
+    </form>
+    <!-- Mostrar solo si hay nombre -->
+    {% if nombre %}
+    <p class="mt-3">Hola {{ nombre }}</p>
+    {% endif %}
+</div>
+{% endblock %}

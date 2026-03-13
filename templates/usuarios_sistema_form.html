@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Nuevo Usuario{% endblock %}
+
+{% block content %}
+<div class="col-md-6">
+
+<h3>Registrar Usuario del Sistema</h3>
+
+<form method="POST">
+
+    <div class="mb-3">
+        <label class="form-label">Correo</label>
+        <input type="email" name="correo" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Nombres</label>
+        <input type="text" name="nombres" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Apellidos</label>
+        <input type="text" name="apellidos" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Rol</label>
+        <select name="rol" class="form-select">
+            <option value="administrador">Administrador</option>
+            <option value="asistente">Asistente</option>
+        </select>
+    </div>
+
+    <button class="btn btn-primary">Registrar</button>
+</form>
+</div>
+{% endblock %}

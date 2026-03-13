@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Cambiar Clave{% endblock %}
+
+{% block content %}
+<div class="col-md-4">
+
+<h3>Cambiar Contraseña</h3>
+
+<form method="POST">
+
+    <div class="mb-3">
+        <label class="form-label">Nueva contraseña</label>
+        <input type="password" name="nueva" class="form-control" required>
+    </div>
+
+    <button class="btn btn-warning">Actualizar</button>
+</form> 
+
+</div>
+{% endblock %} 
