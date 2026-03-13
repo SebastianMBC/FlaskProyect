@@ -114,6 +114,8 @@ def api_login():
 
     if not usuario or not bcrypt.check_password_hash(usuario["clave"], clave):
         return jsonify({"status": "error", "message": "Credenciales incorrectas"}), 401
+    else:
+        print(f"DEBUG: Intento de login con {correo}") # <--- Añade esto
 
     token = generar_token(usuario["id"], usuario["rol"])
 
